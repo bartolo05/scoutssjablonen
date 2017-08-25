@@ -32,7 +32,7 @@ om een niet jin sjabloon te genereren met het jin logo:
 ```$ python gensjabloon.py -t <tak> -o <onderwerp> -j```
 
 lijst van geaccepteerde taknamen:	
-	* kapoenen, kapoenen1, kapoenen2:			logos/logo_01kapoenen.png,
+Markup :* kapoenen, kapoenen1, kapoenen2:			logos/logo_01kapoenen.png,
 	* welpen,	kabouters, kawelpen: 			logos/logo_02kawelpen.png,
 	* jonggidsen, jongverkenners, jonggivers: 	logos/logo_03jonggivers.png,
 	* givers:						logos/logo_04givers.png,
