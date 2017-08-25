@@ -1,0 +1,135 @@
+\documentclass[a4paper]{article}
+%top = 9.2/4
+%bot = 6.7/4
+\usepackage{blindtext}
+\usepackage[bmargin=2.3cm,top=3.383cm,centering]{geometry}
+\usepackage{xcolor}
+\definecolor{takkleur}{HTML}{A376A1}
+\usepackage{python}
+
+
+\usepackage{fontspec}
+\setmainfont[Path=calibri/,
+ BoldItalicFont=CalibriBI.ttf,
+ BoldFont      =CalibriB.ttf,
+ ItalicFont    =CalibriI.ttf]{Calibri.ttf}
+
+ \newfontfamily\collfont[Path=/usr/share/fonts/truetype/calibri/,
+  BoldItalicFont=CalibriBI.ttf,
+  BoldFont      =CalibriB.ttf,
+  ItalicFont    =CalibriI.ttf]{Calibri.ttf}
+
+%\usepackage[head=30pt,foot=1.675cm]{geometry}
+
+
+\usepackage[object=vectorian]{pgfornament}
+
+\usepackage{everypage}
+
+\usepackage{mwe}
+\pagestyle{empty}
+
+%\usepackage[hmargin=2cm,bmargin=3cm,tmargin=4.5cm,centering]{geometry}
+\usepackage{tikzpagenodes}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\usepackage{lmodern}
+\usepackage{atbegshi}
+
+
+
+
+
+
+\newcommand\Header{%  
+\begin{tikzpicture}[remember picture,overlay]
+\fill[takkleur]
+  (current page.north west) -- (current page.north east) --
+    ([yshift=0pt]current page.north east|-current page text area.north east) --
+%  ([yshift=50pt,xshift=-3cm]current page.north|-current page text area.north) --
+%    ([yshift=10pt,xshift=-5cm]current page.north|-current page text area.north) --
+  ([yshift=0pt]current page.north west|-current page text area.north west) -- cycle;
+\node[xshift=-.5\paperwidth,yshift=-1.7cm] at (current page.north east)
+  {\fontsize{55}{60}\selectfont \textbf{Leiding} }; \end{tikzpicture}}
+
+
+
+\newcommand\Footer{%
+\begin{tikzpicture}[remember picture,overlay]
+\fill[takkleur]
+(current page.south west) -- (current page.south east) --
+([yshift=0pt]current page.south east|-current page text area.south east) --
+%([yshift=-40pt,xshift=-3cm]current page.south|-current page text area.south) --
+%([xshift=-5cm,yshift=-10pt]current page.south|-current page text area.south) --
+([yshift=0pt]current page.south west|-current page text area.south west) -- cycle;
+\node[yshift=1.1cm,font=\ttfamily\bfseries\color{white}] at ( [xshift=0cm,yshift=0pt] current page.south) {
+\centering
+%\begin{minipage}
+\includegraphics[width=33pt]{logos/logo_01kapoenen.png}
+
+\includegraphics[width=33pt]{logos/logo_02kawelpen.png}
+
+\includegraphics[width=33pt]{logos/logo_03jonggivers.png}
+
+\includegraphics[width=33pt]{logos/logo_04givers.png}
+
+\includegraphics[width=33pt]{logos/logo_06leiding.png}
+
+\includegraphics[width=33pt]{logos/logo_07groepsleiding.png}
+
+%\end{minipage}
+};
+\node[] at (-0.5,0.8)  {\includegraphics[width=55pt]{logos/logo_06leiding.png}};
+\node[] at (16,1.1)  (T) {\includegraphics[width=100pt]{logos/logo_mastworp.png}};
+\node (capt) [below=of T,yshift=1.2cm, align=center] {\Large\textbf{mastworp}};
+\node[] at (-0.5,-26) {\includegraphics[width=35pt]{logos/logo_scoutsgidsenvlaanderen.png}};
+    \node[] at (15.5,-26) {\includegraphics[width=140pt]{logos/logo_dolmen.png}};
+\end{tikzpicture}%
+}
+
+
+ 
+
+\pagestyle{empty}
+\AtBeginShipoutFirst{\Header\Footer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{lipsum}
+\usepackage{graphicx}
+
+
+\begin{document}
+\collfont
+\mbox{}
+
+
+
+
+
+
+
+
+\end{document}
+
+\centering
+\begin{minipage}
+\includegraphics{logos/logo_01kapoenen.png}
+\includegraphics{logos/logo_02kawelpen.png}
+\includegraphics{logos/logo_03jonggivers.png}
+\includegraphics{logos/logo_04givers.png}
+\includegraphics{logos/logo_06leiding.png}
+\includegraphics{logos/logo_07groepsleiding.png}
+\end{minipage}
